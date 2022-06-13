@@ -1,0 +1,17 @@
+# Python cache
+__pycache__
+*.pyc
+
+# IDE files
+.idea
+.vscode
+
+# environment variables
+.env
+
+# Migration files
+migrations
+
+# virtual environment
+.venv
+venv
