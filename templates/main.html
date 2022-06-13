@@ -1,0 +1,52 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SLS TV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="breaking">
+  <!-- <span id='date-time'></span> -->
+  School of Legal studies</div>
+<div id="newsTicker">
+  <p>
+
+    <span class="section">
+      <span class="story"><span class="subheadings">നിയമവേദി@25 <span>-</span> </span>കൊച്ചിൻ യൂണിവേഴ്‌സിറ്റി ,  കുസാറ്റ് ലീഗൽ എയ്‌ഡ്‌  ക്ലിനിക്‌ , ജില്ലാ ലീഗൽ സർവീസസ് അതോറിറ്റി , ആകാശവാണി കൊച്ചി എഫ് എം എന്നിവയുടെ ആഭിമുഖ്യത്തിൽ ജൂൺ 9 വ്യാഴാഴ്ച്ച 2 മണി മുതൽ കുസാറ്റ് സെമിനാർ കോംപ്ലക്സ് ഹാളിൽ.... ഏവർക്കും സ്വാഗതം</span>
+      <!-- <span class="story"><span class="subheadings">Heading 2</span>explanation 2</span>
+      <span class="story"><span class="subheadings">Heading 3</span>explanation 3</span>
+      <span class="story"><span class="subheadings">Heading 4</span>explanation 4</span>
+      <span class="story"><span class="subheadings">Heading 5</span>explanation 5</span>  -->
+    </span>
+  </p>
+</div>
+<div>
+  <ul class="slideshow">
+    <li><span>Image 01</span></li>
+    <li><span>Image 02</span></li>
+    <li><span>Image 03</span></li>
+    <li><span>Image 04</span></li>
+    <li><span>Image 05</span></li>
+    <li><span>Image 06</span></li>
+  </ul>
+</div>
+<div id="footer">
+
+  <p>Sponsored by: Akhil Jamal Memmorial Charitable Society(AJMCS) | Fireflies, SLS CUSAT</p>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML=dt;
+  </script>
+</body>
+</html>
