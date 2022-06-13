@@ -21,8 +21,10 @@
   <p>
 
     <span class="section">
-      <span class="story"><span class="subheadings">നിയമവേദി@25 <span>-</span> </span>കൊച്ചിൻ യൂണിവേഴ്‌സിറ്റി ,  കുസാറ്റ് ലീഗൽ എയ്‌ഡ്‌  ക്ലിനിക്‌ , ജില്ലാ ലീഗൽ സർവീസസ് അതോറിറ്റി , ആകാശവാണി കൊച്ചി എഫ് എം എന്നിവയുടെ ആഭിമുഖ്യത്തിൽ ജൂൺ 9 വ്യാഴാഴ്ച്ച 2 മണി മുതൽ കുസാറ്റ് സെമിനാർ കോംപ്ലക്സ് ഹാളിൽ.... ഏവർക്കും സ്വാഗതം</span>
-      <!-- <span class="story"><span class="subheadings">Heading 2</span>explanation 2</span>
+        {% for i in news %}
+      <span class="story"><span class="subheadings">{{ i.Title }} <span>-</span> </span>{{ i.Content }}</span>
+      {% endfor %}നിയമവേദി@25
+        <!-- <span class="story"><span class="subheadings">Heading 2</span>explanation 2</span>
       <span class="story"><span class="subheadings">Heading 3</span>explanation 3</span>
       <span class="story"><span class="subheadings">Heading 4</span>explanation 4</span>
       <span class="story"><span class="subheadings">Heading 5</span>explanation 5</span>  -->
