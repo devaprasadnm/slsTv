@@ -1,1 +1,1 @@
-web: gunicorn slsTv.wsgi
+web: gunicorn slsTv.wsgi --log-file-
