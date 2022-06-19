@@ -20,27 +20,28 @@
 <div id="newsTicker">
   <p>
 
-    <span class="section">
-        {% for i in news %}
-      <span class="story"><span class="subheadings">{{ i.Title }} <span>-</span> </span>{{ i.Content }}</span>
-      {% endfor %}
+    <span class="section" id="news">
+{#        {% for i in news %}#}
+{#      <span class="story"><span class="subheadings">{{ i.Title }} <span>-</span> </span>{{ i.Content }}</span>#}
+{#      {% endfor %}#}
         <!-- <span class="story"><span class="subheadings">Heading 2</span>explanation 2</span>
       <span class="story"><span class="subheadings">Heading 3</span>explanation 3</span>
       <span class="story"><span class="subheadings">Heading 4</span>explanation 4</span>
       <span class="story"><span class="subheadings">Heading 5</span>explanation 5</span>  -->
+        <span class="story" ><span class="subheadings" >Heading 4</span>explanation 4</span>
     </span>
   </p>
 </div>
 <div>
-  <ul class="slideshow">
-      {% for image in images %}
-    <li><span style="background-image: url('{{ image.Photos.url }}') ">Image 01</span></li>
+  <ul class="slideshow" id="images">
+{#      {% for image in images %}#}
+{#    <li><span style="background-image: url('{{ image.Photos.url }}') ">Image 01</span></li>#}
 {#    <li><span>Image 02</span></li>#}
 {#    <li><span>Image 03</span></li>#}
 {#    <li><span>Image 04</span></li>#}
 {#    <li><span>Image 05</span></li>#}
 {#    <li><span>Image 06</span></li>#}
-      {% endfor %}
+{#      {% endfor %}#}
   </ul>
 </div>
 <div id="footer">
@@ -52,5 +53,32 @@
     var dt = new Date();
     document.getElementById('date-time').innerHTML=dt;
   </script>
+<script>
+    $(document).ready(function (){
+        setInterval(function(){
+            $.ajax({
+                type:'GET',
+                url:"{% url 'data' %}",
+                success:function(response){
+
+                    $("#news").empty();
+                    for (var key in response.users){
+                        var temp = "<span class='story' ><span class='subheadings' >" + response.users[key].Title +"</span>" +response.users[key].Content+"</span>"
+                        $("#news").append(temp);
+                    }
+
+                     $("#images").empty();
+                    for (var key in response.users){
+                        var temp_img =" <li><span style='background-image: url("+"'"+response.image[key].Photo.url+"'"+") '>Image 01</span></li>"
+                        $("#images").append(temp_img);
+                    }
+                },
+                error: function(response){
+                    alert(" No data Found")
+                }
+            })
+        },1000);
+    });
+</script>
 </body>
 </html>
