@@ -3,11 +3,13 @@ from .models import News,Images
 from django.http import JsonResponse
 # Create your views here.
 
-def home(request):
-    return (render(request,'main.html'))
+def index(request):
+    pics = Images.objects.all()
+    return (render(request,'index.html',{'pics':pics}))
 
-
-def data(request):
+def data_index(request):
     news = News.objects.all()
-    images = Images.objects.all()
-    return JsonResponse({"users": list(news.values()),"image":list(images.values())})
+    pics = Images.objects.all()
+
+
+    return JsonResponse({"users": list(news.values()),"image":list(pics.values())})
