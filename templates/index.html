@@ -1,15 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLS TV</title>
-    <link rel="stylesheet"  href="{% static 'styles/styles.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SLS TV</title>
+        <!-- Custom font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet"  href="{% static 'styles/styles.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:display=swap"
+              rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
             var start = new Date;
 
              setInterval(function() {
@@ -17,90 +23,42 @@
                 $('#date').append( " "+ start.toLocaleString('en-US', { hour: 'numeric',minute:"2-digit", hour12: true })
 )
             }, 1000);
-    </script>
-    
-</head>
-<body>
-    <div class="Container">
-        <div class="box1"> 
-            Sponsored by: Akhil Jamal Memmorial Charitable Society(AJMCS) | Fireflies, SLS CUSAT
-        </div>
-
-        <div class="box2" id="images">
-
-{#            <img src="images/h.png" alt="">#}
-
-                        <div id="slideshow">
-              <div id="slides" >
-{#                  <div class="slide show" data-slide="1">#}
-{#                      <img src="https://browsecat.net/sites/default/files/4k-ultra-high-resolution-nature-wallpapers-98587-255631-9768205.png"#}
-{#                          alt="">#}
-{#                  </div>#}
-
-                  <div class="slide"  data-slide="2">
-                      <img src="https://wallpaperaccess.com/full/31189.jpg" alt="">
-                  </div>
-
-{#                  <div class="slide" data-slide="3">#}
-{#                      <img src="https://wallpapercave.com/wp/wp8975771.jpg" alt="">#}
-{#                  </div>#}
-{##}
-{#                  <div class="slide" data-slide="4">#}
-{#                      <img src="https://i.pinimg.com/originals/e6/90/5c/e6905c4ac56db067d3b265763af49d22.jpg" alt="">#}
-{#                  </div>#}
-{##}
-{#                  <div class="slide" data-slide="5">#}
-{#                      <img src="https://wallpaperaccess.com/full/1208210.jpg" alt="">#}
-{#                  </div>#}
-
-
-              </div>
-                             <div class="slide-btn next">
-                      <span>&raquo;</span>
-                  </div>
-
-                  <div class="slide-btn prev">
-                      <span>&laquo;</span>
-                  </div>
-          </div>
-
-
-        </div>
-
-
-
-
-        <div class="box3">
-
-            <div class="box3-sub1">
-               <div class="box3-sub1-1">
-                <span id="date"></span>
-               </div>
-               <div class="box3-sub1-2">
-                School of legal studies
-               </div>
+        </script>
+    </head>
+    <body>
+        <div class="Container">
+            <div class="box1" style="font-family: 'Anek Malayalam', sans-serif;">Sponsored by: Akhil Jamal Memmorial Charitable Society(AJMCS) | Fireflies, SLS CUSAT</div>
+            <div class="box2" style="font-family: 'Anek Malayalam', sans-serif;" id="images">
+                <div id="slideshow">
+                    <div id="slides">
+                        <img class="slide show"
+                             data-slide='1'
+                             src="https://cusat.ac.in/images/campus/campus.jpg"/>
+                    </div>
+                </div>
             </div>
-            <div class="box3-sub2">
-               
-               <div id="newsTicker">
-                <p>
-                  
-                  <span class="section" id="news">
-{#                    <span class="story"><span class="subheadings">നിയമവേദി@20 <span>-</span> </span>കൊച്ചിൻ യൂണിവേഴ്‌സിറ്റി ,  കുസാറ്റ് ലീഗൽ എയ്‌ഡ്‌  ക്ലിനിക്‌ , ജില്ലാ ലീഗൽ സർവീസസ് അതോറിറ്റി , ആകാശവാണി കൊച്ചി എഫ് എം എന്നിവയുടെ ആഭിമുഖ്യത്തിൽ ജൂൺ 9 വ്യാഴാഴ്ച്ച 2 മണി മുതൽ കുസാറ്റ് സെമിനാർ കോംപ്ലക്സ് ഹാളിൽ.... ഏവർക്കും സ്വാഗതം</span>#}
-{#                    <!-- <span class="story"><span class="subheadings">Heading 2</span>explanation 2</span> #}
-                    <span class="story"><span class="subheadings">Heading 3</span>explanation 3</span> 
-                    <span class="story"><span class="subheadings">Heading 4</span>explanation 4</span> 
-                    <span class="story"><span class="subheadings">Heading 5</span>explanation 5</span>  -->
-                  </span>
-                </p>
-              </div>
+            <div class="box3" style="font-family: 'Anek Malayalam', sans-serif;">
+                <div class="box3-sub1">
+                    <div class="box3-sub1-1">
+                        <span id="date"></span>
+                    </div>
+                    <div class="box3-sub1-2" style="font-family: 'Anek Malayalam', sans-serif;">School of legal studies</div>
+                </div>
+                <div class="box3-sub2">
+                    <div id="newsTicker">
+                        <p>
+                            <span class="section" id="news">
+                                <span class="story" style="font-family: 'Anek Malayalam', sans-serif;"><span class="subheadings" style="font-family:'Poppins',sans-serif; font-weight: bold">Welcome to CUSAT</span>
+                                Cochin University of Science and Technology (CUSAT) is a state government-owned autonomous university in Kochi, Kerala, India. It was founded in 1971 and has three campuses: one in Kalamassery Kochi, one in Ernakulam Town, and one in Kuttanad, Alappuzha, 66 km (41 mi) inland. The university awards degrees in engineering and science at the undergraduate, postgraduate and doctoral levels
+                            </span>
+                        </span>
+                    </p>
+                </div>
             </div>
-           
+        </div>
     </div>
-    </div>
- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
- <script src="{% static 'js/index.js' %}" ></script>    <!-- new addition -->
-<script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>  <!-- new addition -->
+    <script>
     $(document).ready(function (){
         setInterval(function(){
             $.ajax({
@@ -110,7 +68,7 @@
 
                     $("#news").empty();
                     for (var key in response.users){
-                        var temp = "<span class='story' ><span class='subheadings' >" + response.users[key].Title +"</span>" +response.users[key].Content+"</span>"
+                        var temp = "<span class='story'><span class='subheadings'>" + response.users[key].Title +"</span>" +response.users[key].Content+"</span>"
                         $("#news").append(temp);
                     }
 
@@ -119,23 +77,32 @@
                     for (var key in response.image){
 
                         {#var temp_img = "<img src='media/" + response.image[key].Photos + "'"+" alt=''>"#}
-                        var temp_img = "<div class='slides' data-slide='4'><img src='media/"+ response.image[key].Photos +"'"+"alt=''></div>"
+                        var temp_key = parseInt(key) + 1
+                        if(temp_key==1) {
+                            var temp_img = "<div class='slide show' data-slide='" + temp_key + "'><img src='media/"+ response.image[key].Photos +"'"+"alt=''></div>"    
+                        } else {
+                            var temp_img = "<div class='slide' data-slide='" + temp_key + "'><img src='media/"+ response.image[key].Photos +"'"+"alt=''></div>"
+                        }
 
                         $("#slides").append(temp_img);
                         console.log(temp_img)
                     }
+
+                    setInterval(function(){
+                        var currentSlideId = $('.slide.show').attr('data-slide')
+                        var slideCount = $('#slides').children().length
+                        var nextSlideId = currentSlideId == slideCount ? 1 : parseInt(currentSlideId) + 1;
+                        $('.slide.show').removeClass('show')
+                        $('[data-slide='+nextSlideId+']').addClass('show')
+                    }, 5000)
                 },
                 error: function(response){
                     alert(" No data Found")
                 }
             })
-        },1000);
+        },60000)
     });
 </script>
-
-
-
+<!-- <script src="{% static 'js/index.js' %}"></script> -->
 </body>
-
 </html>
-
