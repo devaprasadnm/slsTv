@@ -59,9 +59,10 @@
         </div>
     </div>
     <script>
-        var start = new Date;
+
 
          setInterval(function() {
+             var start = new Date;
             $('#date').text(start.toDateString());
             $('#date').append( " "+ start.toLocaleString('en-US', { hour: 'numeric',minute:"2-digit", hour12: true })
 )
